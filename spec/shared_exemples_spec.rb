@@ -18,3 +18,15 @@ RSpec.describe Hash do
     subject {{a: 1, b: 2, c: 3}}
     include_examples 'A Ruby object with three elements'
 end
+
+class LinkShare
+    def length
+      3
+    end 
+end
+
+RSpec.describe LinkShare do 
+    subject { described_class.new }
+    #subject { LinkShare.new }
+    include_examples 'A Ruby object with three elements'
+end
